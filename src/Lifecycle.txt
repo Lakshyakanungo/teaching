@@ -1,0 +1,25 @@
+What are 3 the 3 phases in a component's lifecycle?
+1)Mounting -> Putting elements into the DOM
+2)Updating -> when the component is updated
+3)Unmounting -> when a component is removed from the DOM
+
+### Mounting
+
+1)constructor()
+2)getDerivedStateFromProps()
+3)render() -> this is the method that actually outputs HTML to the DOM
+4)componentDidMount() -> called after the component is rendered.
+                        This is where you run statements that requires that the component is already placed in the DOM.
+
+
+### Updating
+
+1)getDerivedStateFromProps() -> the natural place to set the "state" object based on the initial props
+2)shouldComponentUpdate() -> return a Boolean , whether React should continue with the rendering or not
+3)render() -> component gets updated, it has to re-render the HTML to the DOM, with the new changes
+4)getSnapshotBeforeUpdate()
+5)componentDidUpdate() -> called after the component is updated in the DOM
+
+### Unmounting
+
+1)componentWillUnmount() -> just before the component is removed from the DOM
